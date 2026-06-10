@@ -1,0 +1,4 @@
+numpy==1.23.5
+joblib==1.5.3
+numba==0.60.0
+ml_edm @ git+https://github.com/ML-EDM/ml_edm.git
