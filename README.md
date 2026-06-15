@@ -1,6 +1,6 @@
 # FIEDSC-U: Fast Interpretable Early Distinctive Shapelet Classification with Uncertainty
 
-**FIEDSC-U** (*Fast Improved Early Distinctive Shapelet Classification with Uncertainty estimates*) to interpretowalna metoda wczesnej klasyfikacji wykorzystująca estymację niepewności. Model ten łączy ze sobą szybkość znajdowania dyskryminujących segmentów poprzez próbkowanie szeregów czasowych z *FSS*[^1], efektywność mechanizmu trenowania modelu z *IEDSC*[^2], estymację niepewności klasyfikacji z *MEDSC-U*[^3] oraz realniejsze odzwierciedlanie charakterystycznych kształtów szeregów czasowych poprzez zastosowanie proponowanej odległości euklidesowej opartej na pochodnej danej jako:
+**FIEDSC-U**[^1] (*Fast Improved Early Distinctive Shapelet Classification with Uncertainty estimates*) to interpretowalna metoda wczesnej klasyfikacji wykorzystująca estymację niepewności. Model ten łączy ze sobą szybkość znajdowania dyskryminujących segmentów poprzez próbkowanie szeregów czasowych z *FSS*[^2], efektywność mechanizmu trenowania modelu z *IEDSC*[^3], estymację niepewności klasyfikacji z *MEDSC-U*[^4] oraz realniejsze odzwierciedlanie charakterystycznych kształtów szeregów czasowych poprzez zastosowanie proponowanej odległości euklidesowej opartej na pochodnej danej jako:
 
 $$\Delta\text{dist}(A, B) = \sqrt{\frac{1}{L-1} \sum_{i=2}^{L} \left( \frac{|a_i - b_i| + |a_{i-1} - b_{i-1}|}{2} \right)^2 \cdot \left(1 + |\Delta_i^{(A)} - \Delta_i^{(B)}|\right)},$$
 
@@ -166,8 +166,8 @@ Metoda `.predict()` zwraca cztery tablice NumPy o długości równej liczbie pr�
 
 ## Bibliografia
 
-
-[^1]: C. Ji, C. Zhao, S. Liu, C. Yang, L. Pan, L. Wu, X. Meng, *A fast shapelet selection algorithm for time series classification*, Computer Networks 148, 2019, 231--240.
-[^2]: W. Yan, G. Li, Z. Wu, S. Wang, P. S. Yu, *Extracting diverse-shapelets for early classification on time series*, World Wide Web (23), 2020, 3055 -- 3081.
-[^3]: M. F. Ghalwash, V. Radosavljevic, Z. Obradovic, *Utilizing Temporal Patterns for Estimating Uncertainty in Interpretable Early Decision Making*, KDD '14: Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining, 2014, 402 -- 411.
+[^1]: M. Zacharecki, *Interpretowalny model klasyfikacji szeregów czasowych do analizy aktywności mózgu*, Praca magisterska, Wydział Matematyki i Nauk Informacyjnych, Politechnika Warszawska, Warszawa, 2026.
+[^2]: C. Ji, C. Zhao, S. Liu, C. Yang, L. Pan, L. Wu, X. Meng, *A fast shapelet selection algorithm for time series classification*, Computer Networks 148, 2019, 231--240.
+[^3]: W. Yan, G. Li, Z. Wu, S. Wang, P. S. Yu, *Extracting diverse-shapelets for early classification on time series*, World Wide Web (23), 2020, 3055 -- 3081.
+[^4]: M. F. Ghalwash, V. Radosavljevic, Z. Obradovic, *Utilizing Temporal Patterns for Estimating Uncertainty in Interpretable Early Decision Making*, KDD '14: Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining, 2014, 402 -- 411.
 
